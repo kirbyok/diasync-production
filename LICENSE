@@ -1,0 +1,127 @@
+PROPRIETARY SOFTWARE LICENSE AGREEMENT
+
+DiaSync - CGM Cloud to Nightscout Synchronization Tool
+Copyright (c) 2025 kirbyok. All rights reserved.
+
+================================================================================
+IMPORTANT - READ CAREFULLY BEFORE USING THIS SOFTWARE
+================================================================================
+
+This software is proprietary and confidential. By using this software, you 
+acknowledge that you have read, understood, and agree to be bound by the terms 
+and conditions of this license agreement.
+
+1. GRANT OF LICENSE
+   Subject to the terms and conditions of this Agreement, the copyright holder 
+   grants you a limited, non-exclusive, non-transferable, revocable license to 
+   use this software solely for personal, non-commercial purposes. This license 
+   does not grant you any rights to the source code or any derivative works.
+
+2. RESTRICTIONS
+   You may NOT:
+   a) Distribute, sell, lease, rent, loan, or otherwise transfer this software
+   b) Modify, alter, adapt, translate, or create derivative works
+   c) Reverse engineer, decompile, disassemble, or attempt to derive source code
+   d) Remove, alter, or obscure any copyright, trademark, or other proprietary notices
+   e) Use this software for commercial purposes without express written consent
+   f) Share access credentials or allow unauthorized access to the software
+   g) Use this software in any manner that violates applicable laws or regulations
+
+3. OWNERSHIP
+   This software and all intellectual property rights therein are and shall 
+   remain the exclusive property of the copyright holder. No title or ownership 
+   rights are transferred to you under this Agreement.
+
+4. MEDICAL DISCLAIMER AND WARNINGS
+   
+   *** CRITICAL MEDICAL DISCLAIMER ***
+   
+   THIS SOFTWARE IS NOT A MEDICAL DEVICE AND IS NOT INTENDED FOR MEDICAL USE.
+   
+   a) NOT FOR MEDICAL ADVICE: This software is provided for informational 
+      purposes only and is NOT intended to provide medical advice, diagnosis, 
+      treatment, or medical decision-making guidance.
+   
+   b) NO MEDICAL WARRANTY: The copyright holder makes NO representations or 
+      warranties regarding the medical accuracy, reliability, or suitability 
+      of any data, information, or functionality provided by this software.
+   
+   c) CONSULT HEALTHCARE PROFESSIONALS: Always consult with qualified healthcare 
+      professionals before making any medical decisions. Never disregard 
+      professional medical advice or delay seeking medical attention based on 
+      information from this software.
+   
+   d) DIABETES MANAGEMENT WARNING: Diabetes is a serious medical condition 
+      requiring professional medical supervision. This software should never 
+      be used as a substitute for proper medical care, glucose monitoring 
+      devices approved by regulatory authorities, or prescribed treatment plans.
+   
+   e) DATA ACCURACY: While efforts are made to synchronize data accurately, 
+      the copyright holder does not guarantee the accuracy, completeness, or 
+      timeliness of any data. Users should always verify critical health data 
+      through approved medical devices and healthcare providers.
+   
+   f) EMERGENCY SITUATIONS: In case of medical emergencies, contact emergency 
+      services immediately. Do not rely on this software for emergency medical 
+      situations.
+
+5. PRIVACY AND DATA PROTECTION
+   a) User data may be processed as necessary for software functionality
+   b) Users are responsible for securing their own credentials and data
+   c) The copyright holder is not responsible for data breaches resulting from 
+      user negligence or third-party service vulnerabilities
+
+6. DISCLAIMER OF WARRANTIES
+   THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE COPYRIGHT HOLDER 
+   DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT ITS 
+   OPERATION WILL BE UNINTERRUPTED OR ERROR-FREE.
+
+7. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT, 
+   INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+   OR PROFITS; BUSINESS INTERRUPTION; OR MEDICAL COMPLICATIONS) HOWEVER CAUSED 
+   AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+   TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+8. REGULATORY COMPLIANCE
+   This software has not been evaluated or approved by the FDA, CE, Health 
+   Canada, or any other regulatory authority for medical use. Users are 
+   responsible for ensuring compliance with applicable laws and regulations 
+   in their jurisdiction.
+
+9. TERMINATION
+   This license is effective until terminated. Your rights under this license 
+   will terminate automatically without notice if you fail to comply with any 
+   terms. Upon termination, you must cease all use of the software and destroy 
+   all copies in your possession.
+
+10. MODIFICATION OF TERMS
+    The copyright holder reserves the right to modify these terms at any time. 
+    Continued use of the software after modification constitutes acceptance of 
+    the new terms.
+
+11. GOVERNING LAW
+    This Agreement shall be governed by and construed in accordance with the 
+    laws of the State of Oklahoma, United States of America, without regard to its conflict of laws 
+    principles.
+
+12. CONTACT INFORMATION
+    For licensing inquiries, permissions, or other matters related to this 
+    software, contact: zane.okc@gmail.com
+
+================================================================================
+BY USING THIS SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, 
+UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS. IF YOU DO 
+NOT AGREE TO THESE TERMS, DO NOT USE THIS SOFTWARE.
+================================================================================
+
+ACKNOWLEDGMENT OF UNDERSTANDING:
+I understand that this software is not a medical device and should not be used 
+for medical decision-making. I acknowledge the importance of consulting with 
+healthcare professionals for all diabetes-related medical decisions.
+
+Last Updated: July 17, 2025

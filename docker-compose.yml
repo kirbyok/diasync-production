@@ -1,0 +1,7 @@
+services:
+  diasync:
+    image: zbaize01/diasync:production
+    container_name: diasync
+    restart: unless-stopped
+    env_file:
+      - .env
