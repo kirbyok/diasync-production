@@ -5,6 +5,23 @@ set -e
 
 echo "🩸 DiaSync Configuration Setup"
 echo "=============================="
+echo ""
+echo "🚨 CRITICAL MEDICAL DISCLAIMER 🚨"
+echo "=================================="
+echo "THIS SOFTWARE IS NOT A MEDICAL DEVICE"
+echo "- NOT FDA APPROVED for medical use"
+echo "- NOT intended for medical decision-making"
+echo "- ALWAYS consult healthcare professionals"
+echo "- Use approved medical devices for diabetes management"
+echo "- In emergencies, contact emergency services immediately"
+echo ""
+read -p "Do you understand this is NOT a medical device? (yes/no): " medical_consent
+if [[ ! "$medical_consent" =~ ^[Yy][Ee][Ss]$ ]]; then
+    echo "❌ You must acknowledge the medical disclaimer to continue."
+    echo "📋 Please read MEDICAL_COMPLIANCE.md for full details."
+    exit 1
+fi
+echo ""
 
 # Check if .env already exists
 if [ -f ".env" ]; then

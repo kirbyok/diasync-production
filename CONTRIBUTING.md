@@ -4,7 +4,20 @@ Thank you for your interest in contributing to DiaSync! This project helps peopl
 
 ## 🚨 Important Medical Disclaimer
 
-This software is NOT a medical device and should never be used for medical decision-making. Always consult with healthcare professionals for diabetes management.
+**THIS SOFTWARE IS NOT A MEDICAL DEVICE AND MUST NEVER BE USED FOR MEDICAL DECISION-MAKING.**
+
+- ❌ **NOT FDA APPROVED** - No regulatory approval for medical use
+- ❌ **NOT CE MARKED** - No medical device certification
+- ❌ **NO CLINICAL VALIDATION** - No safety or efficacy studies
+- ⚕️ **ALWAYS CONSULT HEALTHCARE PROFESSIONALS** for diabetes management
+- 🚨 **EMERGENCY SITUATIONS** - Contact emergency services, not this software
+
+**CONTRIBUTOR RESPONSIBILITIES:**
+- Never implement features that could be interpreted as medical advice
+- Maintain clear separation between data synchronization and medical functionality
+- Include appropriate disclaimers in all documentation
+- Consider medical safety implications of any changes
+- Do not claim medical device status or capabilities
 
 ## 🤝 How to Contribute
 

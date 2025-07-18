@@ -1,3 +1,15 @@
+# DiaSync - CGM Cloud to Nightscout Synchronization
+# 
+# ⚠️  CRITICAL MEDICAL DISCLAIMER ⚠️
+# THIS SOFTWARE IS NOT A MEDICAL DEVICE
+# - NOT FDA APPROVED for medical use
+# - NOT intended for medical decision-making
+# - Always consult healthcare professionals
+# - Use approved medical devices for diabetes management
+# - See MEDICAL_COMPLIANCE.md for full details
+#
+# By using this software you acknowledge it is for informational purposes only.
+
 services:
   diasync:
     image: zbaize01/diasync:production

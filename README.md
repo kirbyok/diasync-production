@@ -201,13 +201,30 @@ docker logs diasync --tail 100
 
 **THIS SOFTWARE IS NOT A MEDICAL DEVICE AND IS NOT INTENDED FOR MEDICAL USE.**
 
+**🚨 REGULATORY STATUS:**
+- ❌ **NOT FDA APPROVED** - Not cleared or approved by the FDA
+- ❌ **NOT CE MARKED** - No CE marking for medical devices
+- ❌ **NOT HEALTH CANADA APPROVED** - Not licensed by Health Canada
+- ❌ **NO CLINICAL VALIDATION** - No clinical trials or safety studies
+
+**📋 CRITICAL WARNINGS:**
 - This tool is for **informational purposes only**
 - **Always consult healthcare professionals** for medical decisions
 - **Never rely solely on this software** for diabetes management
 - **Use approved medical devices** for critical health monitoring
 - **In emergencies, contact emergency services immediately**
+- **Verify all glucose readings** with FDA/CE approved devices
+
+**⚕️ DIABETES-SPECIFIC WARNINGS:**
+- Diabetes requires professional medical supervision
+- Never make insulin dosing decisions based on this software
+- Always use approved glucose monitoring devices for treatment decisions
+- Maintain regular contact with your healthcare team
+- This software may have delays, errors, or data omissions
 
 DiaSync is a data synchronization tool only. It does not provide medical advice, diagnosis, or treatment recommendations.
+
+**📄 Complete Compliance Information:** See [MEDICAL_COMPLIANCE.md](MEDICAL_COMPLIANCE.md) for full regulatory details.
 
 ## 📄 License
 

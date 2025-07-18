@@ -1,17 +1,16 @@
 # DiaSync Makefile - Simple automation without chmod
+#
+# ⚠️  MEDICAL DISCLAIMER: This software is NOT a medical device
+# NOT FDA approved - Always consult healthcare professionals
+# See MEDICAL_COMPLIANCE.md for complete regulatory information
 
-.PHONY: setup start stop logs clean help check-docker template
-
-# Check for docker compose command
-DOCKER_COMPOSE := $(shell command -v docker-compose 2> /dev/null)
-ifndef DOCKER_COMPOSE
-	DOCKER_COMPOSE := docker compose
-endif
+.PHONY: setup start stop logs clean help check-docker template disclaimer
 
 # Default target
 help:
 	@echo "🩸 DiaSync - Available commands:"
 	@echo ""
+	@echo "  make disclaimer - Show medical disclaimer"
 	@echo "  make setup      - Interactive setup (prompts for credentials)"
 	@echo "  make template   - Create .env template (manual editing required)"
 	@echo "  make start      - Start DiaSync (runs setup if needed)"
@@ -20,6 +19,26 @@ help:
 	@echo "  make clean      - Remove containers and volumes"
 	@echo "  make check      - Check .env configuration"
 	@echo "  make help       - Show this help"
+	@echo ""
+	@echo "⚠️  REMINDER: This is NOT a medical device. Always consult healthcare professionals."
+
+# Show medical disclaimer
+disclaimer:
+	@echo "🚨 CRITICAL MEDICAL DISCLAIMER 🚨"
+	@echo "=================================="
+	@echo "THIS SOFTWARE IS NOT A MEDICAL DEVICE"
+	@echo "- NOT FDA APPROVED for medical use"
+	@echo "- NOT intended for medical decision-making"
+	@echo "- ALWAYS consult healthcare professionals"
+	@echo "- Use approved medical devices for diabetes management"
+	@echo "- In emergencies, contact emergency services immediately"
+	@echo ""
+	@echo "📄 Read MEDICAL_COMPLIANCE.md for complete regulatory information"
+# Check for docker compose command
+DOCKER_COMPOSE := $(shell command -v docker-compose 2> /dev/null)
+ifndef DOCKER_COMPOSE
+	DOCKER_COMPOSE := docker compose
+endif
 
 # Check if docker is available
 check-docker:
@@ -47,7 +66,7 @@ template:
 	fi
 
 # Start DiaSync (auto-creates .env if needed)
-start: check-docker setup
+start: check-docker disclaimer setup
 	@echo "🚀 Starting DiaSync..."
 	$(DOCKER_COMPOSE) up -d
 
