@@ -67,10 +67,15 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-#### **Option 4: One-liner (if hosted on GitHub)**
+#### **Option 4: Direct Docker Commands**
 ```bash
-# Download and run setup directly
-curl -s https://raw.githubusercontent.com/your-repo/setup.sh | bash
+# For Docker Compose V2 (newer installations)
+cp .env.example .env
+# Edit .env with your credentials, then:
+docker compose up -d
+
+# For Docker Compose V1 (older installations)
+docker-compose up -d
 ```
 
 ## ⚙️ Configuration
