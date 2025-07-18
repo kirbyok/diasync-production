@@ -1,6 +1,6 @@
 # DiaSync Makefile - Simple automation without chmod
 
-.PHONY: setup start stop logs clean help check-docker
+.PHONY: setup start stop logs clean help check-docker template
 
 # Check for docker compose command
 DOCKER_COMPOSE := $(shell command -v docker-compose 2> /dev/null)
@@ -12,12 +12,14 @@ endif
 help:
 	@echo "🩸 DiaSync - Available commands:"
 	@echo ""
-	@echo "  make setup    - Create .env file if it doesn't exist"
-	@echo "  make start    - Start DiaSync (creates .env if needed)"
-	@echo "  make stop     - Stop DiaSync"
-	@echo "  make logs     - Show logs"
-	@echo "  make clean    - Remove containers and volumes"
-	@echo "  make help     - Show this help"
+	@echo "  make setup      - Interactive setup (prompts for credentials)"
+	@echo "  make template   - Create .env template (manual editing required)"
+	@echo "  make start      - Start DiaSync (runs setup if needed)"
+	@echo "  make stop       - Stop DiaSync"
+	@echo "  make logs       - Show logs"
+	@echo "  make clean      - Remove containers and volumes"
+	@echo "  make check      - Check .env configuration"
+	@echo "  make help       - Show this help"
 
 # Check if docker is available
 check-docker:
@@ -27,10 +29,19 @@ check-docker:
 # Create .env from template
 setup:
 	@if [ ! -f .env ]; then \
+		echo "🔧 Running interactive setup..."; \
+		bash setup.sh; \
+	else \
+		echo "✅ .env already exists"; \
+	fi
+
+# Create .env template (manual editing required)
+template:
+	@if [ ! -f .env ]; then \
 		echo "🔧 Creating .env from template..."; \
 		cp .env.example .env; \
-		echo "✅ .env created! Please edit it with your credentials."; \
-		echo "📝 Then run: make start"; \
+		echo "✅ .env template created!"; \
+		echo "📝 Please edit .env with your credentials, then run: make start"; \
 	else \
 		echo "✅ .env already exists"; \
 	fi
