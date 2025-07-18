@@ -27,7 +27,7 @@ services:
       ABBOTT_REGION=eu
 
       # Nightscout Configuration (required)
-      NIGHTSCOUT_URL=https://your-nightscout.herokuapp.com
+      NIGHTSCOUT_URL=https://your-nightscout.us.nightscoutpro.com
       NIGHTSCOUT_API_SECRET=your_api_secret
       EOF
           echo "✅ Default .env created! Please edit it with your credentials."

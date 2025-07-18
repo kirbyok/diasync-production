@@ -35,24 +35,67 @@ esac
 
 echo ""
 echo "🌐 Enter your Nightscout details:"
-read -p "Nightscout URL (e.g., https://yoursite.herokuapp.com): " NIGHTSCOUT_URL
-read -p "Nightscout API Secret: " NIGHTSCOUT_API_SECRET
+while [[ -z "$NIGHTSCOUT_URL" ]]; do
+    read -p "Nightscout URL (e.g., https://yoursite.us.nightscoutpro.com): " NIGHTSCOUT_URL
+    if [[ -z "$NIGHTSCOUT_URL" ]]; then
+        echo "❌ Nightscout URL is required!"
+    fi
+done
+
+while [[ -z "$NIGHTSCOUT_API_SECRET" ]]; do
+    read -p "Nightscout API Secret: " NIGHTSCOUT_API_SECRET
+    if [[ -z "$NIGHTSCOUT_API_SECRET" ]]; then
+        echo "❌ Nightscout API Secret is required!"
+    fi
+done
+
+# Initialize empty credentials for unused device type
+DEXCOM_USERNAME=""
+DEXCOM_PASSWORD=""
+DEXCOM_REGION="us"
+ABBOTT_USERNAME=""
+ABBOTT_PASSWORD=""
+ABBOTT_REGION="eu"
 
 echo ""
 if [[ "$DEVICE_TYPE" == "Dexcom" ]]; then
     echo "🔵 Enter your Dexcom Share credentials:"
-    read -p "Dexcom Username: " DEXCOM_USERNAME
-    read -s -p "Dexcom Password: " DEXCOM_PASSWORD
-    echo ""
-    read -p "Dexcom Region (us/international) [us]: " DEXCOM_REGION
-    DEXCOM_REGION=${DEXCOM_REGION:-us}
+    while [[ -z "$DEXCOM_USERNAME" ]]; do
+        read -p "Dexcom Username: " DEXCOM_USERNAME
+        if [[ -z "$DEXCOM_USERNAME" ]]; then
+            echo "❌ Dexcom username is required!"
+        fi
+    done
+    
+    while [[ -z "$DEXCOM_PASSWORD" ]]; do
+        read -s -p "Dexcom Password: " DEXCOM_PASSWORD
+        echo ""
+        if [[ -z "$DEXCOM_PASSWORD" ]]; then
+            echo "❌ Dexcom password is required!"
+        fi
+    done
+    
+    read -p "Dexcom Region (us/international) [us]: " DEXCOM_REGION_INPUT
+    DEXCOM_REGION=${DEXCOM_REGION_INPUT:-us}
 else
     echo "🟠 Enter your Abbott/LibreView credentials:"
-    read -p "Abbott Username: " ABBOTT_USERNAME
-    read -s -p "Abbott Password: " ABBOTT_PASSWORD
-    echo ""
-    read -p "Abbott Region (eu/us/global) [eu]: " ABBOTT_REGION
-    ABBOTT_REGION=${ABBOTT_REGION:-eu}
+    while [[ -z "$ABBOTT_USERNAME" ]]; do
+        read -p "Abbott Username: " ABBOTT_USERNAME
+        if [[ -z "$ABBOTT_USERNAME" ]]; then
+            echo "❌ Abbott username is required!"
+        fi
+    done
+    
+    while [[ -z "$ABBOTT_PASSWORD" ]]; do
+        read -s -p "Abbott Password: " ABBOTT_PASSWORD
+        echo ""
+        if [[ -z "$ABBOTT_PASSWORD" ]]; then
+            echo "❌ Abbott password is required!"
+        fi
+    done
+    
+    read -p "Abbott Region (eu/us/global) [eu]: " ABBOTT_REGION_INPUT
+    ABBOTT_REGION=${ABBOTT_REGION_INPUT:-eu}
 fi
 
 # Create .env file
@@ -63,14 +106,14 @@ cat > .env << EOF
 DEVICE_TYPE=$DEVICE_TYPE
 
 # Dexcom Configuration
-DEXCOM_USERNAME=${DEXCOM_USERNAME:-}
-DEXCOM_PASSWORD=${DEXCOM_PASSWORD:-}
-DEXCOM_REGION=${DEXCOM_REGION:-us}
+DEXCOM_USERNAME=$DEXCOM_USERNAME
+DEXCOM_PASSWORD=$DEXCOM_PASSWORD
+DEXCOM_REGION=$DEXCOM_REGION
 
 # Abbott Configuration  
-ABBOTT_USERNAME=${ABBOTT_USERNAME:-}
-ABBOTT_PASSWORD=${ABBOTT_PASSWORD:-}
-ABBOTT_REGION=${ABBOTT_REGION:-eu}
+ABBOTT_USERNAME=$ABBOTT_USERNAME
+ABBOTT_PASSWORD=$ABBOTT_PASSWORD
+ABBOTT_REGION=$ABBOTT_REGION
 
 # Nightscout Configuration
 NIGHTSCOUT_URL=$NIGHTSCOUT_URL
