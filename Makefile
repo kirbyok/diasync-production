@@ -1,6 +1,12 @@
 # DiaSync Makefile - Simple automation without chmod
 
-.PHONY: setup start stop logs clean help
+.PHONY: setup start stop logs clean help check-docker
+
+# Check for docker compose command
+DOCKER_COMPOSE := $(shell command -v docker-compose 2> /dev/null)
+ifndef DOCKER_COMPOSE
+	DOCKER_COMPOSE := docker compose
+endif
 
 # Default target
 help:
@@ -12,6 +18,11 @@ help:
 	@echo "  make logs     - Show logs"
 	@echo "  make clean    - Remove containers and volumes"
 	@echo "  make help     - Show this help"
+
+# Check if docker is available
+check-docker:
+	@command -v docker >/dev/null 2>&1 || { echo "❌ Docker is not installed or not in PATH"; exit 1; }
+	@docker --version >/dev/null 2>&1 || { echo "❌ Docker is not running"; exit 1; }
 
 # Create .env from template
 setup:
@@ -25,24 +36,24 @@ setup:
 	fi
 
 # Start DiaSync (auto-creates .env if needed)
-start: setup
+start: check-docker setup
 	@echo "🚀 Starting DiaSync..."
-	docker-compose up -d
+	$(DOCKER_COMPOSE) up -d
 
 # Stop DiaSync
-stop:
+stop: check-docker
 	@echo "🛑 Stopping DiaSync..."
-	docker-compose down
+	$(DOCKER_COMPOSE) down
 
 # Show logs
-logs:
+logs: check-docker
 	@echo "📋 DiaSync logs (Ctrl+C to exit):"
-	docker-compose logs -f
+	$(DOCKER_COMPOSE) logs -f
 
 # Clean up everything
-clean:
+clean: check-docker
 	@echo "🧹 Cleaning up containers and volumes..."
-	docker-compose down -v
+	$(DOCKER_COMPOSE) down -v
 	docker system prune -f
 
 # Check if .env exists and is configured

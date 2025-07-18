@@ -42,6 +42,21 @@ bash setup.sh
 ```bash
 # Auto-setup and start in one command
 make start
+
+# If you get "docker-compose not found", try:
+# Edit .env first, then use Docker Compose V2:
+docker compose up -d
+```
+
+#### **Option 3: Direct Docker Commands**
+```bash
+# For Docker Compose V2 (newer installations)
+cp .env.example .env
+# Edit .env with your credentials, then:
+docker compose up -d
+
+# For Docker Compose V1 (older installations)
+docker-compose up -d
 ```
 
 #### **Option 3: Manual Template**
@@ -143,6 +158,15 @@ DiaSync synchronizes the following data types:
 ## 🔧 Troubleshooting
 
 ### Common Issues
+
+**Docker Compose Command Not Found:**
+```bash
+# Error: docker-compose: No such file or directory
+# Solution: Use Docker Compose V2 syntax instead
+docker compose up -d
+docker compose logs -f
+docker compose down
+```
 
 **Authentication Errors:**
 - Verify your CGM cloud credentials are correct
