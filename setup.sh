@@ -19,17 +19,13 @@ fi
 echo ""
 echo "📱 Select your CGM device type:"
 echo "1) Dexcom"
-echo "2) Abbott"
-echo "3) FreestyleLibre" 
-echo "4) Freestyle"
+echo "2) Abbott (FreeStyle)"
 echo ""
-read -p "Enter choice (1-4): " device_choice
+read -p "Enter choice (1-2): " device_choice
 
 case $device_choice in
     1) DEVICE_TYPE="Dexcom" ;;
     2) DEVICE_TYPE="Abbott" ;;
-    3) DEVICE_TYPE="FreestyleLibre" ;;
-    4) DEVICE_TYPE="Freestyle" ;;
     *) echo "Invalid choice. Exiting."; exit 1 ;;
 esac
 
