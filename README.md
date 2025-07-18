@@ -30,17 +30,33 @@ DiaSync bridges the gap between your CGM manufacturer's cloud service and your p
 
 ### Installation
 
-1. **Clone or download this repository**
-2. **Create your environment file:**
-   ```bash
-   cp .env.example .env
-   ```
-   Or create a new `.env` file with the configuration template shown below
-3. **Configure your settings** (see Configuration section below)
-4. **Start the service:**
-   ```bash
-   docker-compose up -d
-   ```
+Choose your preferred setup method:
+
+#### **Option 1: Automated Setup (Recommended)**
+```bash
+# Run the interactive setup script (no chmod needed)
+bash setup.sh
+```
+
+#### **Option 2: Using Makefile**
+```bash
+# Auto-setup and start in one command
+make start
+```
+
+#### **Option 3: Manual Template**
+```bash
+# Copy template and edit manually
+cp .env.example .env
+# Edit .env with your credentials, then:
+docker-compose up -d
+```
+
+#### **Option 4: One-liner (if hosted on GitHub)**
+```bash
+# Download and run setup directly
+curl -s https://raw.githubusercontent.com/your-repo/setup.sh | bash
+```
 
 ## ⚙️ Configuration
 
